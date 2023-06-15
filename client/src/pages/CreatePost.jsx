@@ -7,8 +7,8 @@ import { FormField, Loader } from '../components';
 
 const CreatePost = () => {
   const [form, setForm] = useState({
-    name: "wdw",
-    prompt: 'wd',
+    name: "",
+    prompt: '',
     photo: ""
   });
 
@@ -24,7 +24,7 @@ const CreatePost = () => {
   }
 
   const handleChange = (e) => {
-    console.log(e.target.value)
+    console.log(e.target)
 
     setForm( {...form , [e.target.name]:e.target.value})
   }
@@ -47,7 +47,7 @@ const CreatePost = () => {
           <FormField
             label="Your Name"
             type="text"
-            name="name"
+            name='name'
             placeholder="Sahil T"
             value={form.name}
             handleChange={handleChange}
